@@ -45,6 +45,5 @@ class CustomAuthToken(ObtainAuthToken):
         serializer = UserSerializer(token.user)
         data = {
             'token': token.key,
-            'user': serializer.data
         }
         return Response(data)
